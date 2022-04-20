@@ -15,11 +15,11 @@ def ranger(listing, urls, begin, end):
     for i in range(begin, end):
         while 1:
             try:
-                print(str((i-1)//(len(urls)//16) + 1) + "-" + str(i) + " -> " + urls[i])
+                print(str((i-1)//(len(urls)//8) + 1) + "-" + str(i) + " -> " + urls[i])
                 listing.append(multi(urls[i]))
                 urls[i] = 0
             except Exception as e:
-                print(str((i-1)//(len(urls)//16) + 1) + "-" + str(i) + " -X> " + urls[i])
+                print(str((i-1)//(len(urls)//8) + 1) + "-" + str(i) + " -X> " + urls[i])
                 print(e)
                 print('Restarting!')
                 continue
